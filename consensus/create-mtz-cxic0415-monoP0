@@ -1,0 +1,23 @@
+#!/bin/sh
+OUTFILE=`echo $1 | sed -e 's/\.hkl$/.mtz/'`
+
+echo " Input: $1"
+echo "Output: $OUTFILE"
+sed -n '/End\ of\ reflections/q;p' $1 > create-mtz.temp.hkl
+
+echo "Running 'f2mtz'..."
+f2mtz HKLIN create-mtz.temp.hkl HKLOUT $OUTFILE > out.html << EOF
+TITLE Reflections from CrystFEL
+NAME PROJECT wibble CRYSTAL wibble DATASET wibble
+CELL 51.49 100.32 53.77 90.02 112.45 89.98
+SYMM P2
+SKIP 3
+LABOUT H K L IMEAN SIGIMEAN
+CTYPE  H H H J     Q
+FORMAT '(3(F4.0,1X),F10.2,10X,F10.2)'
+EOF
+
+if [ $? -ne 0 ]; then echo "Failed."; exit; fi
+
+rm -f create-mtz.temp.hkl
+echo "Done."
