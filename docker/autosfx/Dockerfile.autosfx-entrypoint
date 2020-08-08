@@ -1,0 +1,8 @@
+FROM slaclcls/autosfx:latest
+LABEL maintainer="Frederic Poitevin <fpoitevi@slac.stanford.edu>"
+# temporary fix: adding an ENTRYPOINT to autosfx:latest
+
+ADD load_everything.sh /img
+WORKDIR /img
+RUN chmod +x load_everything.sh 
+ENTRYPOINT ["./load_everything.sh"] 
