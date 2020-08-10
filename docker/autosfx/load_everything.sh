@@ -16,4 +16,6 @@ export PSOCAKE_FACILITY=LCLS
 # ccp4
 source /img/ccp4-7.1/bin/ccp4.setup-sh
 
+echo "sound check, one two one two"
 
+exec "$@"
