@@ -1,4 +1,4 @@
-#Attempt at recovering the Dockerfile used to generate slaclcls/autosfx:latest:
+# Attempt at recovering the Dockerfile used to generate slaclcls/autosfx:latest:
 
 Followed the instructions from [this image](https://hub.docker.com/r/alpine/dfimage):
 ```
