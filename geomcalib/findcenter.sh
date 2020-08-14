@@ -24,5 +24,5 @@ cd geomcalib
 
 ln -sf $SCRIPTDIR/*.py .
 
-python run-02-powderSum.py --exp cxic0515 --run 79 --noe 1000 --outDir ./
+python run-03-findCenter.py --img ./r0079/cxic0515_0079_max_assem.npy --mask ./r0079/psanaMask.npy
 
