@@ -1,2 +1,14 @@
+
+# misc. files 
 test*
 slurm*.out
+*.log
+*.lp
+current_analysis.config
+
+# misc. directories
+tmp/
+share/
+psocake/
+sfxPhasing/
+
