@@ -13,7 +13,7 @@ t_start=`date +%s`
 export PMI_MMAP_SYNC_WAIT_TIME=600
 
 echo "calling powdersum.sh"
-srun -n 1 -c 1 shifter /img/cctbx-entrypoint.sh ./powdersum.sh
+srun -n 12 shifter ./powdersum.sh
 echo "done powdersum.sh"
 
 t_end=`date +%s`

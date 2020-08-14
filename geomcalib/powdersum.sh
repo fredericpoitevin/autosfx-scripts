@@ -24,5 +24,5 @@ cd geomcalib
 
 ln -sf $SCRIPTDIR/*.py .
 
-mpirun python run-02-powderSum.py --exp cxic0515 --run 79 --noe 1000 --outDir ./
+python run-02-powderSum.py --exp cxic0515 --run 79 --noe 1000 --outDir ./
 
