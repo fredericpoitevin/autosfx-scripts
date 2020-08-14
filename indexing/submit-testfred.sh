@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --account=lcls
-#SBATCH --job-name=autosfx-unitcell
+#SBATCH --job-name=autosfx-unitcell-indexing
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=32
 #SBATCH --constraint=haswell
@@ -11,10 +11,12 @@
 
 module load python/2.7-anaconda-2019.07
 
+scratchdir=/global/cfs/cdirs/lcls/exp/cxi/cxic0515/scratch
+
 python -u indexCrystals.py \
   -e cxic0515 \
   -d CxiDs2.0:Cspad.0 \
-  --geom $SCRATCH/r0081/.temp.geom \
+  --geom $scratchdir/r0081/.temp.geom \
   --peakMethod cxi \
   --integrationRadius 3,4,5 \
   --indexingMethod mosflm \
@@ -22,7 +24,7 @@ python -u indexCrystals.py \
   --maxPeaks 2048 \
   --minRes -1 \
   --tolerance 5,5,5,1.5 \
-  --outDir $SCRATCH \
+  --outDir $scratchdir \
   --sample crystal \
   --queue psanaq \
   --chunkSize 5 \
