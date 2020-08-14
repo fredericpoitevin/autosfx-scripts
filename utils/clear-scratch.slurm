@@ -7,12 +7,11 @@
 #SBATCH --qos=realtime
 
 EXPDIR=/global/cfs/cdirs/lcls/exp/cxi/cxic0515
-
 SCRATCHDIR=$EXPDIR/scratch
 
 chmod -R 777 $SCRATCHDIR
 
-#PHASING=$SCRATCHDIR/sfxPhasing 
-#if [ -d $SCRATCHDIR ]; then
-#  rm -rf $SCRATCHDIR/*
-#fi
+PHASING=$SCRATCHDIR/sfxPhasing-MR 
+if [ -d $PHASING ]; then
+  rm -rf $PHASING/*
+fi

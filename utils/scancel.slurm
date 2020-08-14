@@ -6,4 +6,6 @@
 #SBATCH --time=00:10:00
 #SBATCH --qos=realtime
 
-scancel --name autosfx-reconstruction-phasing 
+#cat /global/homes/p/psdatmgr/arp/arp_submit.sh
+scancel --name autosfx-unitcell-peakfinding
+#scancel --name autosfx-reconstruction-MR-phasing 
