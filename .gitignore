@@ -11,7 +11,9 @@ current_analysis.config
 # misc. directories
 tmp/
 share/
+jobs/
 psocake/
+psocake.bak/
 autosfx/
 sfxPhasing/
-
+phasing/manual/
