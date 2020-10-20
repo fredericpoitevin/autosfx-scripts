@@ -1,10 +1,12 @@
 
 # misc. files 
 test*
-slurm*.out
+*.out
+*.h5
 *.log
 *.lp
 current_analysis.config
+
 
 # misc. directories
 tmp/
