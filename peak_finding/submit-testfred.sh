@@ -15,7 +15,7 @@ t_start=`date +%s`
 
 export PMI_MMAP_SYNC_WAIT_TIME=600
 
-./report.sh ${JID_UPDATE_COUNTERS} &
+./report.sh ${JID_UPDATE_COUNTERS} "$@"&
 
 echo "srun -n 64 shifter ./peak_finding-testfred.sh $@"
 srun -n 64 shifter ./peak_finding-testfred.sh "$@"
